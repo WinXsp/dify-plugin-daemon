@@ -11,6 +11,8 @@ concurrency:
 
 jobs:
   build:
+    env:
+      FORCE_VERIFYING_SIGNATURE: false
     runs-on: ${{ matrix.platform == 'linux/arm64' && 'arm64_runner' || 'ubuntu-latest' }}
     if: true
     strategy:
