@@ -131,13 +131,6 @@ func UploadPluginBundle(
 						return exception.InternalServerError(errors.Join(errors.New("failed to save package"), err)).ToResponse()
 					}
 
-					if config.ForceVerifyingSignature != nil && *config.ForceVerifyingSignature || verify_signature {
-						if !declaration.Verified {
-							return exception.BadRequestError(errors.Join(errors.New(
-								"plugin verification has been enabled, and the plugin you want to install has a bad signature",
-							), err)).ToResponse()
-						}
-					}
 
 					result = append(result, map[string]any{
 						"type": "package",
