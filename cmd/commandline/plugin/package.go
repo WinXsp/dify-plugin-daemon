@@ -36,5 +36,5 @@ func PackagePlugin(inputPath string, outputPath string) {
 		return
 	}
 
-	log.Info("plugin packaged successfully, output path: %s", outputPath)
+	log.Info("plugin111 packaged successfully, output path: %s", outputPath)
 }
