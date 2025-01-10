@@ -65,7 +65,7 @@ type Config struct {
 	PersistenceStorageMaxSize int64  `envconfig:"PERSISTENCE_STORAGE_MAX_SIZE"`
 
 	// force verifying signature for all plugins, not allowing install plugin not signed
-	ForceVerifyingSignature *bool `envconfig:"FORCE_VERIFYING_SIGNATURE"`
+	ForceVerifyingSignature *bool false
 
 	// lifetime state management
 	LifetimeCollectionHeartbeatInterval int `envconfig:"LIFETIME_COLLECTION_HEARTBEAT_INTERVAL"  validate:"required"`
